@@ -1,6 +1,7 @@
 const DELTA = 1/100;
 
 function PoolGame() {
+
     this.balls = [
         [new trig(1022,413),COLOR.YELLOW],
         [new trig(1056,393),COLOR.YELLOW],
@@ -41,7 +42,7 @@ PoolGame.prototype.create = function() {
     Canvas.drawImage(images.background, {x:0, y:0});
 
     for (let i = 0; i < this.balls.length; i++) {
-        this.balls[i].create();
+        this.balls[i].draw();
     }
 
     this.stick.create();

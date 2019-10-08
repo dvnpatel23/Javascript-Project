@@ -7,8 +7,8 @@ function Ball(pos, color) {
     this.image = getBallByColor(color);
 }
 
-Ball.prototype.update = function() {
-    this.pos.addTo(this.vel.multiply(DELTA));
+Ball.prototype.update = function(delta) {
+    this.pos.addTo(this.vel.multiply(delta));
 
     this.vel = this.vel.multiply(0.98);
 
